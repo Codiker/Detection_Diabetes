@@ -7,8 +7,8 @@ import pickle
 
 df = pd.read_csv('diabetes.csv')
 df.drop(columns=['Pregnancies', 'SkinThickness'], inplace=True)
-features = ['Glucose', 'BloodPressure', 'Insulin', 'Age', 'DiabetesPedigreeFunction']
-X = df[features]
+valores = ['Glucose', 'BloodPressure', 'Insulin', 'Age', 'DiabetesPedigreeFunction']
+X = df[valores]
 y = df['Outcome']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
 model = SVC(kernel='linear')
